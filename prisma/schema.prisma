@@ -1,0 +1,26 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+//C:\Users\abuam\Ny_sqlite.db
+// datasource db {
+  // provider = "postgresql"
+  // url      = env("DATABASE_URL")
+// }
+//
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./db.sqlite"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Product {
+  id          String @id @default(cuid())
+  name        String
+  description String
+  image       String
+  price       Int
+  sku         String
+}
