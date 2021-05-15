@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div style="text-align: center">
   <h1>alsalamoalejkom ang-nest!</h1>
   <img
@@ -6,3 +7,14 @@
   />
 </div>
 <div>Message: {{ hello$ | async | json }}</div>
+=======
+<section class="product-listings" *ngFor="let product of $products | async">
+  <div class="product-card">
+    <img [src]="product.image" />
+    <p class="product-name">{{ product.name }}</p>
+    <p class="product-description">{{ product.description }}</p>
+    <p class="product-price">{{ product.price | currency }}</p>
+    <button class="add-to-cart-button">Add to Cart</button>
+  </div>
+</section>
+>>>>>>> 590c5da6a6f863250cb4a52e7da4a98b80d8438c
